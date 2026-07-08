@@ -13,6 +13,7 @@ if [ -f /etc/os-release ]; then
 fi
 current_dir="$PWD"
 echo $DISTRO > .distro_zab.txt
+apt update; apt install sudo git -y
 # Clone linux-on-ibm-z to keep it current
 git clone https://github.com/linux-on-ibm-z/scripts.git /tmp/linux-on-ibm-z
 # Build Debian and RPM packages
